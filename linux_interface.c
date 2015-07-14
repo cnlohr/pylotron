@@ -24,6 +24,7 @@ uint8_t readbuffer[65536];
 uint16_t readbufferpos = 0;
 uint16_t readbuffersize = 0;
 
+
 void CNRFBDump( int i )
 {
 	while( i-- ) CNRFBRead1();
@@ -98,7 +99,6 @@ void CNRFBEndSend( )
 
 void CNRFBCloseConnection( int conn )
 {
-	int i;
 	DisconnectEvent( conn );
 	close( sockets[conn] );
 	sockets[conn] = -1;

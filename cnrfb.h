@@ -84,7 +84,7 @@ void StartRRE( int qty, uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t 
 
 int CountCharForRRE( uint8_t ch ); //returns count of subrects.
 void DrawCharAtAsPartOfRRE( uint8_t ch, uint8_t fg, uint16_t offsetx, uint16_t offsety );
-void DrawRectAtAsPartOfRRE( uint16_t x, uint16_t y, uint16_t w, uint16_t h,  uint8_t fg );
+void DrawRectAtAsPartOfRRE( uint16_t x, uint16_t y, uint16_t w, uint16_t h,  uint8_t fg );  //9 bytes.
 void PrintText( const char * text, uint8_t fg, uint8_t bg, uint16_t border, uint16_t x, uint16_t y ); //Treated as a rect.
 void EndFrameDraw(int conn);
 

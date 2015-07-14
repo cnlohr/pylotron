@@ -1,6 +1,5 @@
 #include "mathfuncts.h"
 #include "mathtables.h"
-#include <math.h>
 
 short tsin( unsigned char angle )
 {
