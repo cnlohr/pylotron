@@ -32,48 +32,55 @@ procTask(os_event_t *events)
 	}
 }
 
+uint8_t outbuffer[32*3];
+
 //Timer event.
-static void ICACHE_FLASH_ATTR
+static void //ICACHE_FLASH_ATTR
 myTimer(void *arg)
 {
 	int i, j;
+	static int update;
 	uart0_sendStr(".");
+	update++;
+
 
 #define LEDSPERSEG 1
-	uint8_t outbuffer[32*3];
 
-	for( i = 0; i < 8; i++ )
+	//Do this since we don't want to update it every single time.
+	switch( update & 0x0f )
 	{
-		uint8_t pc = PlayerColors[i];
-		struct FPS * f = &FPSs[i];
-
-		uint8_t red = (pc & 0x07)<<5;
-		uint8_t green = (pc & 0x38)<<2;
-		uint8_t blue = (pc & 0xc0);
-		if( !f->in_use )
+	case 0:
+		for( i = 0; i < 8; i++ )
 		{
-			red>>=3;
-			green>>=3;
-			blue>>=3;
-		}
+			uint8_t pc = PlayerColors[i];
+			struct FPS * f = &FPSs[i];
+
+			uint8_t red = (pc & 0x07)<<5;
+			uint8_t green = (pc & 0x38)<<2;
+			uint8_t blue = (pc & 0xc0);
+			if( !f->in_use )
+			{
+				red>>=3;
+				green>>=3;
+				blue>>=3;
+			}
 
 
-		int rank = (LEDSPERSEG*7)-f->rank*LEDSPERSEG;
-		if( rank < 0 ) rank = 0;
-		if( rank >= 31 ) rank = 31;
-		for( j = 0; j < LEDSPERSEG; j++ )
-		{
-			outbuffer[rank*3+1] = red;
-			outbuffer[rank*3+0] = green;
-			outbuffer[rank*3+2] = blue;
-			rank++;
+			int rank = (LEDSPERSEG*7)-f->rank*LEDSPERSEG;
+			if( rank < 0 ) rank = 0;
+			if( rank >= 31 ) rank = 31;
+			for( j = 0; j < LEDSPERSEG; j++ )
+			{
+				outbuffer[rank*3+1] = red;
+				outbuffer[rank*3+0] = green;
+				outbuffer[rank*3+2] = blue;
+				rank++;
+			}
 		}
+		break;
+	case 3:
+		WS2812OutBuffer( outbuffer, 8*3*LEDSPERSEG );
 	}
-
-//	ets_wdt_disable();
-	ets_intr_lock(); 
-	WS2812OutBuffer( outbuffer, 8*3*LEDSPERSEG );
-	ets_intr_unlock(); 
 
 	CNRFBTick( 1 );
 	UpdateEvent( 1 );
@@ -88,9 +95,7 @@ GotSerialByte( char c )
 void ICACHE_FLASH_ATTR
 user_init(void)
 {
-	ets_intr_lock(); 
 	WS2812OutBuffer( "\x1f\x1f\x1f", 3 );
-	ets_intr_unlock(); 
 
 	uart_init(BIT_RATE_115200, BIT_RATE_115200);
 	uart0_sendStr("\r\nCustom Server\r\n");
@@ -106,9 +111,7 @@ user_init(void)
 	os_timer_setfn(&interval_timer, (os_timer_func_t *)myTimer, NULL);
 	os_timer_arm(&interval_timer, 20, 1); //50 Hz.
  
-	ets_intr_lock(); 
 	WS2812OutBuffer( "\x1f\x1f\x00", 3 );
-	ets_intr_unlock(); 
 
 	//Hook for initialization
 	SocketInit();
@@ -141,13 +144,13 @@ void CNRFBDump( int i )
 }
 
 
-int CNRFBCanSendData( int sock )
+int ICACHE_FLASH_ATTR CNRFBCanSendData( int sock )
 {
 	
 	struct espconn * conn = ESPSockets[sock];
 	struct espconn_packet infoarg;
 	sint8 r = espconn_get_packet_info(conn, &infoarg);
-	if( infoarg.snd_queuelen == 0 )
+	if( infoarg.snd_queuelen < 2 )
 	{
 		//This actually doesn't happen unless there's a fault.
 		CNRFBConnectionWasClosed( sock );
@@ -162,7 +165,7 @@ int CNRFBCanSendData( int sock )
 	return 1;
 }
 
-int  CNRFBStartSend( int conn )
+int  ICACHE_FLASH_ATTR CNRFBStartSend( int conn )
 {
 	if( !CNRFBCanSendData( conn ) )
 	{
@@ -174,7 +177,7 @@ int  CNRFBStartSend( int conn )
 	sendptr = 0;
 }
 
-void CNRFBSendData( const uint8_t * data, int len )
+void ICACHE_FLASH_ATTR CNRFBSendData( const uint8_t * data, int len )
 {
 	memcpy( sendbuffer + sendptr, data, len );
 	sendptr += len;
@@ -199,7 +202,7 @@ void CNRFBSend4( uint32_t data )
 	sendbuffer[sendptr++] = data;
 }
 
-void CNRFBEndSend( )
+void ICACHE_FLASH_ATTR CNRFBEndSend( )
 {
 	if( sendconn >= 0 && sendptr )
 	{
@@ -208,7 +211,7 @@ void CNRFBEndSend( )
 }
 
 
-void CNRFBCloseConnection( int conn )
+void ICACHE_FLASH_ATTR CNRFBCloseConnection( int conn )
 {
 	int i;
 	DisconnectEvent( conn );

@@ -25,23 +25,23 @@ FOLDERPREFIX:=$(GCC_FOLDER)/root/bin
 PREFIX:=$(FOLDERPREFIX)/xtensa-lx106-elf-
 CC:=$(PREFIX)gcc
 
-CFLAGS:=-mlongcalls -I$(SDK)/include -Idriver -Iuser -Os -I$(SDK)/include/ -g -I..
-#	-Wl,--relax -Wl,--gc-sections \
+CFLAGS:=-DICACHE_FLASH -mlongcalls -I$(SDK)/include -Idriver -Iuser -Os -I$(SDK)/include/ -g -I.. -Wl,--relax -Wl,--gc-sections # -flto
+# -flto
 
 LDFLAGS_CORE:=\
 	-nostdlib \
 	-L$(XTLIB) \
 	-L$(XTGCCLIB) \
-	$(SDK)/lib/liblwip.a \
-	$(SDK)/lib/libssl.a \
-	$(SDK)/lib/libupgrade.a \
-	$(SDK)/lib/libnet80211.a \
-	$(SDK)/lib/liblwip.a \
-	$(SDK)/lib/libwpa.a \
-	$(SDK)/lib/libnet80211.a \
-	$(SDK)/lib/libphy.a \
 	$(SDK)/lib/libmain.a \
+	$(SDK)/lib/libnet80211.a \
+	$(SDK)/lib/libwpa.a \
+	$(SDK)/lib/libupgrade.a \
+	$(SDK)/lib/liblwip.a \
 	$(SDK)/lib/libpp.a \
+	$(SDK)/lib/libssl.a \
+	$(SDK)/lib/libphy.a \
+	$(SDK)/lib/libnet80211.a \
+	$(SDK)/lib/libwpa.a \
 	$(XTGCCLIB) \
 	-T $(SDK)/ld/eagle.app.v6.ld
 
@@ -53,7 +53,7 @@ LINKFLAGS:= \
 #	$(PREFIX)ld $^ $(LDFLAGS) -o $@
 
 $(TARGET_OUT) : $(SRCS)
-	$(PREFIX)gcc $(CFLAGS) -o $@ $^ -flto $(LINKFLAGS)
+	$(PREFIX)gcc $(CFLAGS) -o $@ $^  $(LINKFLAGS) 
 
 
 
