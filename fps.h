@@ -38,7 +38,7 @@ struct FPS
 	int wasjusthit:1;
 	int in_use:1;
 	int shoot_cooldown:3;
-	int rank:3;
+	uint8_t rank:3;
 	uint8_t sendmode;
 	int16_t x, y;
 	int16_t pointangle; //-32768,32768, 0 is in front.
@@ -51,6 +51,8 @@ struct FPS
 	uint8_t z;
 	int8_t speedz;
 };
+
+extern const uint8_t PlayerColors[MAX_RFB_CONNS];
 
 extern struct FPS FPSs[MAX_RFB_CONNS];
 

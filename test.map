@@ -6,18 +6,18 @@ Archive member included to satisfy reference by file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
-CNRFBs              0x40              /tmp/cc83lkH7.o (symbol from plugin)
-PlayerPoints        0x10              /tmp/ccpsoZsR.o (symbol from plugin)
-sendptr             0x2               /tmp/ccxEw9rH.o (symbol from plugin)
-Things              0x360             /tmp/ccpsoZsR.o (symbol from plugin)
-sockets             0x28              /tmp/ccxEw9rH.o (symbol from plugin)
-readbuffer          0x10000           /tmp/ccxEw9rH.o (symbol from plugin)
-FPSs                0xe0              /tmp/ccpsoZsR.o (symbol from plugin)
-PylonHealths        0x37              /tmp/ccpsoZsR.o (symbol from plugin)
-RankingHeap         0x8               /tmp/ccpsoZsR.o (symbol from plugin)
-RankingHeapPlace    0x1               /tmp/ccpsoZsR.o (symbol from plugin)
-sendconn            0x1               /tmp/ccxEw9rH.o (symbol from plugin)
-sendbuffer          0x4000            /tmp/ccxEw9rH.o (symbol from plugin)
+CNRFBs              0x40              /tmp/ccUgeC56.o (symbol from plugin)
+PlayerPoints        0x10              /tmp/cctaRZaq.o (symbol from plugin)
+sendptr             0x2               /tmp/ccJjQBVx.o (symbol from plugin)
+Things              0x360             /tmp/cctaRZaq.o (symbol from plugin)
+sockets             0x28              /tmp/ccJjQBVx.o (symbol from plugin)
+readbuffer          0x10000           /tmp/ccJjQBVx.o (symbol from plugin)
+FPSs                0xe0              /tmp/cctaRZaq.o (symbol from plugin)
+PylonHealths        0x37              /tmp/cctaRZaq.o (symbol from plugin)
+RankingHeap         0x8               /tmp/cctaRZaq.o (symbol from plugin)
+RankingHeapPlace    0x1               /tmp/cctaRZaq.o (symbol from plugin)
+sendconn            0x1               /tmp/ccJjQBVx.o (symbol from plugin)
+sendbuffer          0x4000            /tmp/ccJjQBVx.o (symbol from plugin)
 
 Discarded input sections
 
@@ -39,17 +39,17 @@ Discarded input sections
  .data          0x0000000000000000        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
  .note.GNU-stack
                 0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
- .text          0x0000000000000000        0x0 /tmp/cc83lkH7.o (symbol from plugin)
- .text          0x0000000000000000        0x0 /tmp/ccXp1K1R.ltrans0.ltrans.o
- .data          0x0000000000000000        0x0 /tmp/ccXp1K1R.ltrans0.ltrans.o
- .bss           0x0000000000000000        0x0 /tmp/ccXp1K1R.ltrans0.ltrans.o
+ .text          0x0000000000000000        0x0 /tmp/ccUgeC56.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 /tmp/ccGWNwob.ltrans0.ltrans.o
+ .data          0x0000000000000000        0x0 /tmp/ccGWNwob.ltrans0.ltrans.o
+ .bss           0x0000000000000000        0x0 /tmp/ccGWNwob.ltrans0.ltrans.o
  .note.GNU-stack
-                0x0000000000000000        0x0 /tmp/ccXp1K1R.ltrans0.ltrans.o
- .eh_frame      0x0000000000000000      0x300 /tmp/ccXp1K1R.ltrans0.ltrans.o
- .text          0x0000000000000000        0x0 /tmp/ccxEw9rH.o (symbol from plugin)
- .text          0x0000000000000000        0x0 /tmp/ccgkOLhh.o (symbol from plugin)
- .text          0x0000000000000000        0x0 /tmp/ccpsoZsR.o (symbol from plugin)
- .text          0x0000000000000000        0x0 /tmp/ccU3QbLr.o (symbol from plugin)
+                0x0000000000000000        0x0 /tmp/ccGWNwob.ltrans0.ltrans.o
+ .eh_frame      0x0000000000000000      0x300 /tmp/ccGWNwob.ltrans0.ltrans.o
+ .text          0x0000000000000000        0x0 /tmp/ccJjQBVx.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 /tmp/cc2hdXQY.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 /tmp/cctaRZaq.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 /tmp/cc6EVMAR.o (symbol from plugin)
  .data          0x0000000000000000        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .bss           0x0000000000000000        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .note.GNU-stack
@@ -79,12 +79,12 @@ Linker script and memory map
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
-LOAD /tmp/cc83lkH7.o
-LOAD /tmp/ccXp1K1R.ltrans0.ltrans.o
-LOAD /tmp/ccxEw9rH.o
-LOAD /tmp/ccgkOLhh.o
-LOAD /tmp/ccpsoZsR.o
-LOAD /tmp/ccU3QbLr.o
+LOAD /tmp/ccUgeC56.o
+LOAD /tmp/ccGWNwob.ltrans0.ltrans.o
+LOAD /tmp/ccJjQBVx.o
+LOAD /tmp/cc2hdXQY.o
+LOAD /tmp/cctaRZaq.o
+LOAD /tmp/cc6EVMAR.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/libgcc.a
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/libgcc_s.so
 LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/libc.so
@@ -247,7 +247,7 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
  .text.startup.main
-                0x0000000000400850      0x555 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400850      0x555 /tmp/ccGWNwob.ltrans0.ltrans.o
                 0x0000000000400850                main
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
@@ -256,51 +256,51 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
  *fill*         0x0000000000400dcf        0x1 
  .text          0x0000000000400dd0       0xbd /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
  .text.tsin.2490
-                0x0000000000400e8d       0x51 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400e8d       0x51 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.RespawnPlayer.2499
-                0x0000000000400ede       0x44 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400ede       0x44 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.DisconnectEvent.2505
-                0x0000000000400f22        0xf /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400f22        0xf /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.HeapAdd.2508
-                0x0000000000400f31       0x5f /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400f31       0x5f /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.HeapRemove.2515
-                0x0000000000400f90       0x91 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000400f90       0x91 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBRead4.2534
-                0x0000000000401021       0x62 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401021       0x62 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBRead2.2537
-                0x0000000000401083       0x3d /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401083       0x3d /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBRead1.2539
-                0x00000000004010c0       0x28 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004010c0       0x28 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBSend4.2541
-                0x00000000004010e8       0x4f /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004010e8       0x4f /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBSend2.2544
-                0x0000000000401137       0x2d /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401137       0x2d /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBSend1.2547
-                0x0000000000401164       0x19 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401164       0x19 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBCloseConnection.2502
-                0x000000000040117d       0x24 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x000000000040117d       0x24 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.ToolStart.2421
-                0x00000000004011a1       0x12 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004011a1       0x12 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBInit.2550
-                0x00000000004011b3       0x12 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004011b3       0x12 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.ConnectEvent.2496
-                0x00000000004011c5       0x41 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004011c5       0x41 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.UpdateEvent.2416
-                0x0000000000401206      0x57e /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401206      0x57e /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBEndSend.2488
-                0x0000000000401784       0x91 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401784       0x91 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBSendData.2520
-                0x0000000000401815       0x2c /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401815       0x2c /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBCanSendData.2531
-                0x0000000000401841       0x39 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401841       0x39 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBStartSend.2528
-                0x000000000040187a       0x22 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x000000000040187a       0x22 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.StartFrameDraw.2524
-                0x000000000040189c       0x38 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x000000000040189c       0x38 /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.FreeFrameForClient.2439
-                0x00000000004018d4      0x71a /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004018d4      0x71a /tmp/ccGWNwob.ltrans0.ltrans.o
  .text.CNRFBTick.2436
-                0x0000000000401fee      0x254 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000401fee      0x254 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000402242        0xe 
  .text          0x0000000000402250       0x72 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
                 0x0000000000402250                __libc_csu_init
@@ -318,29 +318,29 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 .rodata         0x00000000004022d0     0x119a
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.1
-                0x00000000004022d0      0x177 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x00000000004022d0      0x177 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000402447        0x1 
  .rodata.FreeFrameForClient.2439
-                0x0000000000402448       0x28 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000402448       0x28 /tmp/ccGWNwob.ltrans0.ltrans.o
  .rodata.CNRFBTick.2436
-                0x0000000000402470       0x40 /tmp/ccXp1K1R.ltrans0.ltrans.o
- .rodata.main   0x00000000004024b0       0x80 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000402470       0x40 /tmp/ccGWNwob.ltrans0.ltrans.o
+ .rodata.main   0x00000000004024b0       0x80 /tmp/ccGWNwob.ltrans0.ltrans.o
  .rodata.sintab.2697
-                0x0000000000402530       0x41 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000402530       0x41 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000402571        0xf 
  .rodata.atancorrect.2694
-                0x0000000000402580       0x81 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000402580       0x81 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000402601        0xf 
  .rodata.font_pieces.2693
-                0x0000000000402610      0xc38 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000402610      0xc38 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000403248        0x8 
  .rodata.font_places.2691
-                0x0000000000403250      0x202 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403250      0x202 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000403452        0x6 
  .rodata.PlayerColors.2690
-                0x0000000000403458        0x8 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403458        0x8 /tmp/ccGWNwob.ltrans0.ltrans.o
  .rodata.keymap.2675
-                0x0000000000403460        0xa /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403460        0xa /tmp/ccGWNwob.ltrans0.ltrans.o
 
 .rodata1
  *(.rodata1)
@@ -425,9 +425,9 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 .data           0x0000000000403720       0x18
  *(.data .data.* .gnu.linkonce.d.*)
  .data.ServerInit.2689
-                0x0000000000403720       0x14 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403720       0x14 /tmp/ccGWNwob.ltrans0.ltrans.o
  .data.last_boolet.2637
-                0x0000000000403734        0x4 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403734        0x4 /tmp/ccGWNwob.ltrans0.ltrans.o
 
 .tm_clone_table
                 0x0000000000403738        0x0
@@ -451,47 +451,47 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
  .bss           0x0000000000403748        0x1 /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
  *fill*         0x0000000000403749        0x7 
  .bss.sendbuffer.2696
-                0x0000000000403750     0x4000 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000403750     0x4000 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.sendconn.2631
-                0x0000000000407750        0x1 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407750        0x1 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407751        0x1 
  .bss.sendptr.2632
-                0x0000000000407752        0x2 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407752        0x2 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.cl.2758.2477.2629
-                0x0000000000407754        0x1 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407754        0x1 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407755        0xb 
  .bss.Things.2680
-                0x0000000000407760      0x360 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407760      0x360 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.PlayerPoints.2679
-                0x0000000000407ac0       0x10 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407ac0       0x10 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.RankingHeapPlace.2678
-                0x0000000000407ad0        0x1 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407ad0        0x1 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407ad1        0x7 
  .bss.RankingHeap.2677
-                0x0000000000407ad8        0x8 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407ad8        0x8 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.gtickcount.2638
-                0x0000000000407ae0        0x1 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407ae0        0x1 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407ae1        0xf 
  .bss.PylonHealths.2676
-                0x0000000000407af0       0x37 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407af0       0x37 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.pylons_remaining.2636
-                0x0000000000407b27        0x1 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407b27        0x1 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.gameover.2635
-                0x0000000000407b28        0x2 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407b28        0x2 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407b2a        0x6 
  .bss.FPSs.2654
-                0x0000000000407b30       0xe0 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407b30       0xe0 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.CNRFBs.2641
-                0x0000000000407c10       0x40 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407c10       0x40 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.readbuffersize.2633
-                0x0000000000407c50        0x2 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407c50        0x2 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.readbufferpos.2634
-                0x0000000000407c52        0x2 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407c52        0x2 /tmp/ccGWNwob.ltrans0.ltrans.o
  *fill*         0x0000000000407c54        0xc 
  .bss.readbuffer.2640
-                0x0000000000407c60    0x10000 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000407c60    0x10000 /tmp/ccGWNwob.ltrans0.ltrans.o
  .bss.sockets.2630
-                0x0000000000417c60       0x28 /tmp/ccXp1K1R.ltrans0.ltrans.o
+                0x0000000000417c60       0x28 /tmp/ccGWNwob.ltrans0.ltrans.o
  *(COMMON)
                 0x0000000000417c88                . = ALIGN ((. != 0x0)?0x8:0x1)
 
@@ -534,7 +534,7 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
  *(.comment)
  .comment       0x0000000000000000       0x24 /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o
                                          0x25 (size before relaxing)
- .comment       0x0000000000000000       0x25 /tmp/ccXp1K1R.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x25 /tmp/ccGWNwob.ltrans0.ltrans.o
  .comment       0x0000000000000000       0x25 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .comment       0x0000000000000000       0x25 /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o
 

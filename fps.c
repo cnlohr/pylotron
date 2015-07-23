@@ -247,6 +247,7 @@ void ToolStart()
 void DisconnectEvent( int conn )
 {
 	FPSs[conn].in_use = 0;
+	PlayerPoints[conn] = 0;
 }
 
 

@@ -34,9 +34,9 @@ void ICACHE_FLASH_ATTR WS2812OutBuffer( uint8_t * buffer, uint16_t length )
 		uint8_t byte = buffer[i];
 		while (mask) 
 		{
-			( byte & mask ) ? SEND_WS_1() : SEND_WS_0();
+			if( byte & mask ) SEND_WS_1(); else SEND_WS_0();
 			mask >>= 1;
-        	}
+        }
 	}
 }
 

@@ -1,4 +1,5 @@
 #include "mem.h"
+#include "fps.h"
 #include "c_types.h"
 #include "user_interface.h"
 #include "ets_sys.h"
@@ -35,11 +36,43 @@ procTask(os_event_t *events)
 static void ICACHE_FLASH_ATTR
 myTimer(void *arg)
 {
-	int i;
+	int i, j;
 	uart0_sendStr(".");
 
+#define LEDSPERSEG 1
+	uint8_t outbuffer[32*3];
+
+	for( i = 0; i < 8; i++ )
+	{
+		uint8_t pc = PlayerColors[i];
+		struct FPS * f = &FPSs[i];
+
+		uint8_t red = (pc & 0x07)<<5;
+		uint8_t green = (pc & 0x38)<<2;
+		uint8_t blue = (pc & 0xc0);
+		if( !f->in_use )
+		{
+			red>>=3;
+			green>>=3;
+			blue>>=3;
+		}
+
+
+		int rank = (LEDSPERSEG*7)-f->rank*LEDSPERSEG;
+		if( rank < 0 ) rank = 0;
+		if( rank >= 31 ) rank = 31;
+		for( j = 0; j < LEDSPERSEG; j++ )
+		{
+			outbuffer[rank*3+1] = red;
+			outbuffer[rank*3+0] = green;
+			outbuffer[rank*3+2] = blue;
+			rank++;
+		}
+	}
+
+//	ets_wdt_disable();
 	ets_intr_lock(); 
-	WS2812OutBuffer( "\x00\x04\x00", 3 );
+	WS2812OutBuffer( outbuffer, 8*3*LEDSPERSEG );
 	ets_intr_unlock(); 
 
 	CNRFBTick( 1 );
